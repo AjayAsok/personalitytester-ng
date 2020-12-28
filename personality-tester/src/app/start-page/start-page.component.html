@@ -1,0 +1,11 @@
+<ol>
+    <li *ngFor="let element of questionsAndAnswers">{{element.question}}
+        <br>
+        <p class="list-group-item" *ngFor="let item of element.ansList">
+            <input type="radio" name="list_name" value="{{item}}" (change)="onItemChange(item)" />
+            {{item}}
+        </p>
+        <br>
+        <br>
+    </li>
+</ol>
